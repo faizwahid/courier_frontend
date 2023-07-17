@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:15px}
+
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Karma", sans-serif;
+  color: black;
+  display: block;
+  border: none;
+  background: white;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  background-color: #ddd;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: black;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: grey;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+table, th, td {
+  border:3px solid black;
+  max-width:auto;
+  margin:auto;
+  background-color:#ddd;
+  text-align: center;
+}
+.table1 {
+  border:3px solid black;
+  background-color: white
+}
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:20%;min-width:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#close" onclick="w3_close();document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button">Dashboard</a>
+ <button class="w3-bar-item dropdown-btn">Branch
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#addNewBranch.html" onclick="w3_close();document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button ">Add New</a>
+    <a href="listBranch.html" onclick="w3_close()" class="w3-bar-item w3-button">List</a>
+  </div>
+  <button class="w3-bar-item dropdown-btn">Branch Staff
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+  <a href="#addNewBranchStaff.html" onclick="w3_close();document.getElementById('id02').style.display='block'"  class="w3-bar-item w3-button">Add New</a>
+    <a href="listBranchStaff.html" onclick="w3_close()" class="w3-bar-item w3-button">List</a>
+  </div>
+  <button class="w3-bar-item dropdown-btn">Parcels
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a onclick="w3_close();document.getElementById('id03').style.display='block'" class="w3-bar-item w3-button">Add New</a>
+    <a href="listAll.html" onclick="w3_close()" class="w3-bar-item w3-button">List All</a>
+    <a href="acceptedCourier.html" onclick="w3_close()" class="w3-bar-item w3-button">Item Accepted by Courier</a>
+    <a href="collecter.html" onclick="w3_close()" class="w3-bar-item w3-button">Collected</a>
+    <a href="shipped.html" onclick="w3_close()" class="w3-bar-item w3-button">Shipped</a>
+    <a href="inTransit.html" onclick="w3_close()" class="w3-bar-item w3-button">In-Transit</a>
+    <a href="arrivedDestination.html" onclick="w3_close()" class="w3-bar-item w3-button">Arrived At Destination</a>
+    <a href="outDelivered.html" onclick="w3_close()" class="w3-bar-item w3-button">Out for Delivery</a>
+    <a href="readyPickup.html" onclick="w3_close()" class="w3-bar-item w3-button">Ready to Pickup</a>
+    <a href="Delivered.html" onclick="w3_close()" class="w3-bar-item w3-button">Delivered</a>
+    <a href="pickedUp.html" onclick="w3_close()" class="w3-bar-item w3-button">Picked-up</a>
+    <a href="unsuccessful.html" onclick="w3_close()" class="w3-bar-item w3-button">Unsuccessful Delivery Attempt</a>
+  </div>
+  <a href="trackparcel.html" onclick="w3_close()" class="w3-bar-item w3-button">Track Parcel</a>
+  <a href="report.html" onclick="w3_close()" class="w3-bar-item w3-button">Report</a>
+  
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1350px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16"><a href="login.html">EXIT</a></div>
+    <div class="w3-center w3-padding-16">COLLECTED</div>
+  </div>
+</div>
+  
+
+<div class="main">
+  <br><br><br><br><br>
+  
+  
+    <div style="float: right; padding-bottom: 10px; font-size: 18px;">
+      <a href="addNewBranchStaff.html"><button>Add New</button></a>
+    </div>
+    <table class="table1" style="width:100%">  
+      <tr>
+        <td colspan="1" style="text-align: left; font-size: 18px;">Show <SELECT NAME="dun" id="dun" onclick="getDun(this.value)">
+          <OPTION VALUE="select">10</OPTION>
+            <OPTION VALUE="select">20</OPTION>
+              <OPTION VALUE="select">30</OPTION>
+          </SELECT> entries 
+          <div style="float: right; font-size: 18px; display: inline-table;">Search <input type="text" id="fname" name="fname">&nbsp<input type="submit" value="Find">
+          </div>
+        </td>
+      </tr>
+    </table>
+    <table style="width:100%">
+      <tr>
+        <center>
+        <td>#</td>
+        <td>Reference Number</td>
+        <td>Sender Name</td>
+        <td>Recipent Name</td>
+        <td>Status</td>
+        <td>Action</td>
+        </center>
+      </tr>
+      <tr>
+        <center>
+        <td>1</td>
+        <td>505604168988</td>
+        <td>Jamil</td>
+        <td>Sample</td>
+        <td>Collected</td>
+        <td style="text-align: center;">
+        	  <a href="editParcel.html"><i class="fas fa-eye"></i></a>
+              <a href="editParcel.html"><i class="fas fa-edit"></i></a>
+              <a href="#delete"><i class="fas fa-trash-alt"></i></a>
+        </td>
+        </center>
+      </tr>
+       <tr>
+        <center>
+        <td>2</td>
+        <td>514912669061</td>
+        <td>Abu</td>
+        <td>Suraya</td>
+        <td>Collected</td>
+        <td style="text-align: center;">
+        	  <a href="editParcel.html"><i class="fas fa-eye"></i></a>
+              <a href="editBranchStaff.html"><i class="fas fa-edit"></i></a>
+              <a href="#delete"><i class="fas fa-trash-alt"></i></a>
+        </td>
+        </center>
+      </tr>
+    </table>
+
+</div>
+
+
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+</body>
+</html>
